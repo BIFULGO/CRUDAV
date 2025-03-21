@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete</title>
+</head>
+<body>
+    <form> 
+        <h3>DELETE</h3>
+        <label>CPF:</label>
+        <input type="text" id="cpf">
+        <input type="button" onclick="deletarDados()" value="Deletar">
+        <a href="index.html"><input type="button" value="proxima page"></a>
+
+        <h1>Dados Cadastrais - GET</h1>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Idade</th>
+                <th>CPF</th>
+            </tr>
+            <tbody id="tabela-corpo"></tbody>
+        </table>
+</form>
+
+<style>
+    body {
+        background-color: #f0f8ff; /* Azul claro */
+        color: #003366; /* Azul escuro para o texto */
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+    }
+
+    h3 {
+        color: #003366; /* Azul escuro */
+    }
+
+    label {
+        display: block;
+        margin: 10px 0 5px;
+    }
+
+    input[type="text"] {
+        padding: 10px;
+        border: 1px solid #003366; /* Azul escuro */
+        border-radius: 5px;
+        width: 100%;
+        max-width: 300px;
+    }
+
+    input[type="button"] {
+        background-color: #003366; /* Azul escuro */
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+
+    input[type="button"]:hover {
+        background-color: #00509e; /* Azul mais claro ao passar o mouse */
+    }
+
+    h1 {
+        color: #003366; /* Azul escuro */
+        margin-top: 20px;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+
+    th, td {
+        border: 1px solid #003366; /* Azul escuro */
+        padding: 10px;
+        text-align: left;
+    }
+
+    th {
+        background-color: #003366; /* Azul escuro */
+        color: white;
+    }
+
+    tr:nth-child(even) {
+        background-color: #e6f0ff; /* Azul muito claro */
+    }
+</style>
+
+
+
+
+<script src="delete.js"></script>
+</body>
+</html>

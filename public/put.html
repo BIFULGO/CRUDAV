@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Put</title>
+</head>
+<body>
+    <form>
+        <h3>PUT</h3>
+        <label>ID:</label>
+        <input type="text" id="id" readonly><br>
+        <label>Nome:</label>
+        <input type="text" id="nomeAtualizar">
+        <br>
+        <label>Idade:</label>
+        <input type="text" id="idadeAtualizar">
+        <br>
+        <label>CPF:</label>
+        <input type="text" id="cpfAtualizar" placeholder="Digite o CPF para busca">
+        <br>
+        <input type="button" onclick="buscarDados()" value="Buscar">
+        <input type="button" onclick="atualizarDados()" value="Atualizar">
+        <a href="delete.html"><input type="button" value="proxima page"></a>
+        <br>
+        <h1>Dados Cadastrais - GET</h1>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Idade</th>
+                <th>CPF</th>
+            </tr>
+            <tbody id="tabela-corpo"></tbody>
+        </table>
+    </form>
+
+    <style>
+        body {
+            background-color: #e0f7fa; /* Azul claro */
+            color: #004d40; /* Verde escuro para o texto */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h3 {
+            color: #00796b; /* Verde médio */
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            border: 1px solid #00796b; /* Verde médio */
+            border-radius: 5px;
+            width: 100%;
+            max-width: 300px;
+        }
+
+        input[type="button"] {
+            background-color: #00796b; /* Verde médio */
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            margin-right: 10px;
+        }
+
+        input[type="button"]:hover {
+            background-color: #004d40; /* Verde escuro ao passar o mouse */
+        }
+
+        h1 {
+            color: #00796b; /* Verde médio */
+            margin-top: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #00796b; /* Verde médio */
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #00796b; /* Verde médio */
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #b2dfdb; /* Verde muito claro */
+        }
+    </style>
+
+    <script src="put.js"></script>
+</body>
+</html>
